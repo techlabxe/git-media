@@ -2,6 +2,7 @@ module GitMedia
   module FilterSmudge
 
     def self.print_stream(stream)
+      STDOUT.binmode
       while data = stream.read(4096) do
         print data
       end
